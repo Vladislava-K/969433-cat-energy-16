@@ -1,5 +1,5 @@
 .site-list {
-  .no-list-style();
+  .list-reset();
 
   font-family: @font;
   font-size: 20px;
@@ -13,3 +13,32 @@
   color: @bg-alblack;
   background-color: @bg-white;
 }
+
+//.site-list {
+//display: none;
+//}
+
+@media @tablet-width {
+  .site-list {
+    width: 444px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media @desktop-width {
+  .site-list {
+    width: 484px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: transparent;
+  }
+
+  .site-list a {
+    color: @bg-white;
+  }
+}
+

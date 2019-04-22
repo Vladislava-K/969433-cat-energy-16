@@ -6,8 +6,34 @@
   font-size: 16px;
   line-height: 16px;
 
-  text-align: left;
+  text-align: center;
 
   color: @bg-darkgrey;
   background-color: @bg-lightgrey;
+}
+
+.page-footer__wrapper {
+  .wrapper();
+}
+
+.page-footer__logo img {
+  width: 128px;
+  height: 24px;
+}
+
+@media @tablet-width {
+  .page-footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media @desktop-width {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

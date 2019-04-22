@@ -1,8 +1,15 @@
-/*
+
 .main-nav {
   margin: 0;
   padding: 0;
 
+  display: flex;
+
+  flex-direction: column;
+  //justify-content: space-between;
+
+
+/*
   font-family: @font;
   font-size: 20px;
 
@@ -14,9 +21,30 @@
 
   color: #111111;
   background-color: #ffffff;
-}
 */
+}
 
+
+/*
 .main-nav__wrapper {
   .wrapper();
 }
+*/
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__wrapper {
+    .wrapper();
+  }
+}
+
+/*
+@media @tablet-width {
+  .main-nav {
+    width: 444px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+*/
+

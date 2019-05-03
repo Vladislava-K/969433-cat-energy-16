@@ -2,14 +2,11 @@
   margin: 0;
   padding: 0;
 
-  font-family: @font;
+  font-family: @foot-font;
   font-size: 14px;
   line-height: 18px;
 
-  text-transform: uppercase;
-  text-align: center;
-
-  color: @bg-alblack;
+  color: @bg-darkgrey;
   background-color: @bg-white;
 }
 
@@ -20,25 +17,97 @@
 }
 
 .selection__wrapper {
+  width: 320px;
+  margin: 0 auto;
+
   .wrapper();
 }
 
 .selection__item {
-  margin: 20px 0 0 0;
-  padding: 20px 20px 20px 20px;
+  margin: 22px 0 0 0;
+  padding: 30px 20px 0 20px;
 
-  color: @bg-alblack;
+  //color: @bg-darkgrey;
   background-color: @bg-lightgrey;
 }
 
+.selection__title-item {
+  margin: 0;
+  padding: 0 0 30px 71px;
+
+  font-size: 24px;
+  line-height: 37px;
+  //color: @bg-darkgrey;
+  font-family: @font;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.selection__description {
+  margin: 0;
+  padding: 0 0 21px 0;
+  text-transform: none;
+
+  /*
+  //font-size: 14px;
+  font-size: 10px;
+  line-height: 18px;
+  color: @bg-darkgrey;
+  font-family: @foot-font;
+  */
+}
+
+.selection__button {
+  width: 100%;
+}
+
 @media @tablet-width {
+  .selection__wrapper {
+    width: 768px;
+    margin: 0 auto;
+
+    .wrapper();
+  }
+
   .selection__item {
     margin: 30px 0 0 0;
-    padding: 80px 60px 60px 50px;
+    padding: 79px 60px 0 53px;
+  }
+
+  .selection__title-item {
+    margin: 0;
+    padding: 0 0 24px 0;
+
+    font-size: 36px;
+    line-height: 37px;
+    //color: @bg-darkgrey;
+    font-family: @font;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .selection__description {
+    margin: 0;
+    padding: 0 220px 38px 0;
+    text-transform: none;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .selection__item:last-child .selection__description {
+    padding: 0 255px 38px 0;
   }
 }
 
 @media @desktop-width {
+  .selection__wrapper {
+    width: 1300px;
+    margin: 0 auto;
+
+    .wrapper();
+  }
+
   .selection__list {
     display: flex;
     flex-direction: row;
@@ -49,5 +118,26 @@
     width: 570px;
     margin: 80px 40px 80px 40px;
     padding: 80px 50px 55px 50px;
+  }
+
+  .selection__title-item {
+    margin: 0;
+    padding: 0 0 30px 71px;
+
+    font-size: 36px;
+    line-height: 37px;
+    //color: @bg-darkgrey;
+    font-family: @font;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .selection__description {
+    margin: 0;
+    padding: 0 0 21px 0;
+    text-transform: none;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 }

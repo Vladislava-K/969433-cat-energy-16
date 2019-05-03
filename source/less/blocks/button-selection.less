@@ -1,6 +1,7 @@
 .button-selection {
   margin: 0;
-  padding: 8px 10px;
+  //padding: 0;
+  padding: 19px 10px 20px 0;
 
   display: inline-block;
   vertical-align: top;
@@ -16,10 +17,41 @@
   line-height: 16px;
 
   text-transform: uppercase;
-  text-align: center;
+  //text-align: center;
 
-  box-sizing: border-box;
+  //box-sizing: border-box;
   border: 0;
+  //border-top: 1px solid #d9d9d9;
 
   outline-style: none;
+
+  &:hover {
+    color: @bg-alblack;
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .button-selection {
+    border-top: 1px solid #d9d9d9;
+  }
+}
+
+@media @tablet-width {
+  .button-selection {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding: 19px 10px 59px 0;
+  }
+}
+
+@media @desktop-width {
+  .button-selection {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

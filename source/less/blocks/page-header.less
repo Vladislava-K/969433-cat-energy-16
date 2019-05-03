@@ -1,71 +1,99 @@
 .page-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
 
-  margin: 0;
-  padding-bottom: 26px;
-  padding-top: 26px;
+  padding-top: 11px;
 
   font-family: @font;
   font-size: 20px;
-
-  //font-weight: 500;
   line-height: 20px;
 
   text-transform: uppercase;
-  text-align: center;
 
   color: @bg-alblack;
   background-color: @bg-white;
 }
 
 .page-header__wrapper {
-  .wrapper();
-}
+  //.wrapper();
 
-/*
-.page-header__logo {
-  order: 0;
-}
-
-.page-header__main-nav {
-  order: 0;
-}
-
-.page-header__button-menu {
-  order: 0;
-}
-*/
-
-.page-header__logo img {
-  width: 192px;
-  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 @media (max-width: @mobile-width-only) {
-  .page-header {
-    flex-direction: column;
+  .page-header__logo {
+    //display: block;
+    padding-left: 20px;
+    padding-bottom: 14px;
+    //width: 192px;
+    //height: 38px;
+
+    border-bottom: 1px solid #e6e6e6;
   }
 }
 
 @media @tablet-width {
-  .page-header__logo img {
-    width: 173px;
-    height: 58px;
+  .page-header {
+    width: 768px;
+    margin: 0 auto;
+
+    padding-top: 24px;
+  }
+
+  .page-header__wrapper {
+    .wrapper();
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
 @media @desktop-width {
   .page-header {
-    background-color: @bg-white;
-    background-position: right top;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
+    //min-width: 1200px;
+    width: 1300px;
+
+    //width: 1440px;
+    margin: 0 auto;
+
+    padding-top: 56px;
   }
 
-  .page-header__logo img {
-    width: 202px;
-    height: 59px;
+  .page-header--index {
+    .site-list a {
+      color: @bg-white;
+    }
+
+    position: relative;
+  }
+
+  .page-header--index::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -63px;
+
+    width: 720px;
+    height: 696px;
+
+    background-position: right top;
+    background-image: url("/img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    //z-index: -1;
+  }
+
+  .page-header__wrapper {
+    .wrapper();
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }

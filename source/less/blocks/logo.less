@@ -2,26 +2,45 @@
   margin: 0;
   padding: 0;
 
-  background-color: @bg-white;
-
-  //width: 192px;
-  //height: 38px;
-  //display: flex;
-  //justify-content: space-between;
+  background-color: transparent;
 }
 
-/*
+.logo__double {
+  width: 191px;
+  height: 38px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__title {
+  width: 128px;
+  height: 24px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 @media @tablet-width {
-  .logo {
+  .logo__double {
     width: 173px;
     height: 58px;
   }
 }
 
 @media @desktop-width {
-  .logo {
+  .logo__double {
     width: 202px;
     height: 59px;
   }
 }
-*/

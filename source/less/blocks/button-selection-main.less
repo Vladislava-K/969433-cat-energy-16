@@ -1,6 +1,6 @@
 .button-selection-main {
   margin: 0;
-  padding: 15px 73px;
+  padding: 11px 20px 11px 20px;
 
   display: inline-block;
   vertical-align: top;
@@ -19,10 +19,34 @@
   text-transform: uppercase;
   text-align: center;
 
-  box-sizing: border-box;
+  //box-sizing: border-box;
   border: 0;
 
   outline-style: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+}
+
+.button-selection-main--all {
+  color: @bg-alblack;
+  background-color: @bg-lightgrey;
+
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: #ebebeb;
+  }
 }
 
 @media @tablet-width {
@@ -30,13 +54,17 @@
     //min-height: 52px;
     //min-width: 245px;
 
-    margin: 0;
+    //margin: 0;
     padding: 16px 28px 16px 26px;
 
     font-family: @font;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+
+   // position: absolute;
+    //top: 330px;
+    //right: 395px;
   }
 }
 

@@ -7,18 +7,57 @@
   flex-direction: row;
   justify-content: space-between;
 
+  font-size: 16px;
+  line-height: 16px;
+  color: @bg-darkgrey;
+  font-family: @foot-font;
+  text-transform: none;
+
   color: @bg-darkgrey;
   background-color: @bg-lightgrey;
+}
+
+.copyright__logo-academy-image {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #c8e0ba;
+  }
+}
+
+.copyright__logo-academy-title {
+
+  &:hover {
+    color: rgba(68, 68, 68, 1);
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media @tablet-width {
   .copyright {
     width: 162px;
   }
+
+  .copyright__logo-academy-title {
+    text-align: right;
+  }
 }
 
 @media @desktop-width {
   .copyright {
     width: 164px;
+  }
+
+  .copyright__logo-academy-title {
+    text-align: right;
   }
 }

@@ -1,43 +1,116 @@
 .site-list {
-  .list-reset();
-
   font-family: @font;
   font-size: 20px;
-
-  //font-weight: 500;
   line-height: 20px;
 
   text-transform: uppercase;
-  text-align: center;
 
   color: @bg-alblack;
-  background-color: @bg-white;
+  background-color: transparent;
 }
 
-//.site-list {
-//display: none;
-//}
+.site-list a {
+  display: block;
+  color: @bg-alblack;
+  background-color: transparent;
+
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-list a[href] {
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .site-list {
+    width: 100%;
+    //position: relative;
+  }
+
+  .site-list a {
+    text-align: center;
+    padding: 25px 0;
+  }
+}
 
 @media @tablet-width {
   .site-list {
-    width: 444px;
+    font-size: 18px;
+    line-height: 25px;
+
+    width: 440px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .site-list__item a {
+    padding: 7px 0;
+    background: none;
+    border: none;
+  }
+
+  .site-list__item--active a {
+    border-bottom: 2px solid @bg-lightgreen;
   }
 }
 
 @media @desktop-width {
   .site-list {
-    width: 484px;
+    font-size: 20px;
+    line-height: 24.86px;
+
+    width: 481px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     background-color: transparent;
   }
 
-  .site-list a {
+  .site-list__item {
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-list__item a {
+    padding: 9px 0;
+    background: none;
+    border: none;
+  }
+
+  .site-list__item--active a {
+    border-bottom: 2px solid @bg-lightgreen;
+  }
+
+  .page-header--index {
     color: @bg-white;
+
+    .site-list a[href] {
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .page-header--index {
+    .site-list__item--active a {
+      border-bottom: 2px solid @bg-white;
+    }
   }
 }

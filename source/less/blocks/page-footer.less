@@ -6,34 +6,58 @@
   font-size: 16px;
   line-height: 16px;
 
-  text-align: center;
-
   color: @bg-darkgrey;
   background-color: @bg-lightgrey;
 }
 
 .page-footer__wrapper {
   .wrapper();
+
+  width: 320px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.page-footer__logo img {
-  width: 128px;
-  height: 24px;
+@media (max-width: @mobile-width-only) {
+  .page-footer__wrapper {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .page-footer__copyright {
+    padding: 14px 0 32px 0;
+    width: 100%;
+    //text-align: center;
+
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .page-footer__logo {
+    padding: 39px 0 29px 0;
+    width: 100%;
+    text-align: center;
+
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 @media @tablet-width {
-  .page-footer {
+  .page-footer__wrapper {
+    .wrapper();
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
   }
 }
 
 @media @desktop-width {
-  .page-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .page-footer__wrapper {
+    .wrapper();
+
+    width: 1200px;
+    margin: 0 auto;
   }
 }

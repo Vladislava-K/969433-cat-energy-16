@@ -1,5 +1,5 @@
 .selection {
-  margin: 0;
+  margin: 0 0 17px 0;
   padding: 0;
 
   font-family: @foot-font;
@@ -18,55 +18,57 @@
 
 .selection__wrapper {
   width: 320px;
-  margin: 0 auto;
 
   .wrapper();
 }
 
 .selection__item {
-  margin: 22px 0 0 0;
+  margin: 0 0 20px 0;
   padding: 30px 20px 0 20px;
 
   background-color: @bg-lightgrey;
   position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 23.5px;
+    left: 22px;
+    background: @bg-lightgreen;
+
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+  }
 }
 
-.selection__circle {
+.selection__item--slimming::after {
   position: absolute;
-  top: 23.5px;
-  left: 21px;
-  background: @bg-lightgreen;
-
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
-}
-
-.selection__item--slimming .selection__circle::after {
   content: "";
-  position: absolute;
-  top: -1px;
-  left: 9px;
 
+  top: 22px;
+  left: 30px;
   width: 35px;
   height: 49px;
 
-  background-position: left top;
-  //background-position: 9px -1px;
   background-image: url("../img/icon-cat-slim.svg");
   background-repeat: no-repeat;
 }
 
-.selection__item--fattening .selection__circle::after {
-  content: "";
+.selection__item--fattening::after {
   position: absolute;
-  top: 11px;
-  left: -7px;
+  content: "";
 
+  top: 35px;
+  left: 13px;
   width: 67px;
   height: 28px;
 
-  background-position: left top;
   background-image: url("../img/icon-cat-pro.svg");
   background-repeat: no-repeat;
 }
@@ -77,7 +79,7 @@
 
   font-size: 24px;
   line-height: 37px;
-  //color: @bg-darkgrey;
+
   font-family: @font;
   font-weight: 400;
   text-transform: uppercase;
@@ -87,161 +89,140 @@
   margin: 0;
   padding: 0 0 21px 0;
   text-transform: none;
-
-  /*
-  //font-size: 14px;
-  font-size: 10px;
-  line-height: 18px;
-  color: @bg-darkgrey;
-  font-family: @foot-font;
-  */
 }
 
 .selection__button {
-  width: 100%;
+  margin: 14px 0 17px 0;
+}
+
+@media @mobile-width-only {
+  .selection {
+    margin-top: 22px;
+  }
+  .selection__description {
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 @media @tablet-width {
+  .selection {
+    margin: -3px 0 44px 0;
+  }
+
   .selection__wrapper {
     width: 768px;
-    //margin: 0 auto;
-
-    //.wrapper();
   }
 
   .selection__item {
-    margin: 30px 0 0 0;
-    padding: 79px 60px 0 53px;
+    margin: 0 0 30px 0;
+    padding: 76px 60px 57px 53px;
+
+    &::before {
+      top: 94px;
+      left: 447px;
+      width: 200px;
+      height: 200px;
+    }
   }
 
-  .selection__circle {
-    position: absolute;
-    top: 95px;
-    left: 445px;
-    background: @bg-lightgreen;
+  .selection__item--slimming::after {
+    top: 80px;
+    left: 475px;
 
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 141px;
+    height: 194px;
+
+    //background-repeat: no-repeat;
   }
 
-  .selection__item--slimming .selection__circle::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 9px;
+  .selection__item--fattening::after {
+    top: 135px;
+    left: 412px;
 
-    width: 194px;
-    height: 140px;
+    width: 268px;
+    height: 113px;
 
-    background-position: left top;
-    //background-position: 9px -1px;
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-  }
-
-  .selection__item--fattening .selection__circle::after {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: -7px;
-
-    width: 112px;
-    height: 268px;
-
-    background-position: left top;
-    background-image: url("../img/icon-cat-pro.svg");
-    background-repeat: no-repeat;
+    //background-repeat: no-repeat;
   }
 
   .selection__title-item {
-    margin: 0 0 24.5px 0;
+    margin: 0 0 25px 0;
     padding: 0;
 
     font-size: 36px;
     line-height: 37px;
-    //color: @bg-darkgrey;
+
     font-family: @font;
     font-weight: 400;
     text-transform: uppercase;
   }
 
   .selection__description {
-    margin: 0;
-    padding: 0 220px 38px 0;
-    text-transform: none;
+    padding: 0 220px 37px 0;
+    margin: 0 0 14px 0;
 
     font-size: 16px;
     line-height: 24px;
   }
 
+  .selection__button {
+    margin: 0;
+  }
+}
+
+@media @tablet-width-only {
   .selection__item:last-child .selection__description {
     padding: 0 255px 38px 0;
   }
 }
 
 @media @desktop-width {
+  .selection {
+    margin: 0 0 73px 0;
+  }
+
   .selection__wrapper {
     width: 1300px;
-    //margin: 0 auto;
-
-    //.wrapper();
   }
 
   .selection__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .selection__item {
     width: 570px;
     margin: 0;
-    padding: 76px 50px 55px 53px;
+    padding: 76px 50px 57px 53px;
 
     &:nth-child(2n) {
       margin-left: 0;
     }
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
-  .selection__circle {
-    position: absolute;
-    top: 47px;
-    left: 52px;
-    background: @bg-lightgreen;
+  .selection__item--slimming::after {
+    top: 41px;
+    left: 66px;
 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 71px;
+    height: 97px;
   }
 
-  .selection__item--slimming .selection__circle::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 9px;
-
-    width: 97px;
-    height: 70px;
-
-    background-position: left top;
-    //background-position: 9px -1px;
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-  }
-
-  .selection__item--fattening .selection__circle::after {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: -7px;
+  .selection__item--fattening::after {
+    top: 69px;
+    left: 34px;
 
     width: 134px;
-    height: 56px;
-
-    background-position: left top;
-    background-image: url("../img/icon-cat-pro.svg");
-    background-repeat: no-repeat;
+    height: 57px;
   }
 
   .selection__title-item {
@@ -250,7 +231,7 @@
 
     font-size: 36px;
     line-height: 37px;
-    //color: @bg-darkgrey;
+
     font-family: @font;
     font-weight: 400;
     text-transform: uppercase;
@@ -263,5 +244,9 @@
 
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .selection__button {
+    margin: 14px 0 0 0;
   }
 }

@@ -14,7 +14,7 @@
   color: @bg-alblack;
   background-color: transparent;
 
-  border-bottom: 1px solid #e6e6e6;
+  //border-bottom: 1px solid #e6e6e6;
 }
 
 .site-list a[href] {
@@ -27,15 +27,19 @@
   }
 }
 
-@media (max-width: @mobile-width-only) {
+@media @mobile-width-only {
   .site-list {
     width: 100%;
     //position: relative;
   }
 
+  .site-list__item {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   .site-list a {
     text-align: center;
-    padding: 25px 0;
+    padding: 25px;
   }
 }
 
@@ -44,11 +48,21 @@
     font-size: 18px;
     line-height: 25px;
 
-    width: 440px;
+    width: 439px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    text-align: right;
+    align-content: center;
+  }
+
+  .site-list__item {
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .site-list__item a {
@@ -65,39 +79,29 @@
 @media @desktop-width {
   .site-list {
     font-size: 20px;
-    line-height: 24.86px;
+    line-height: 25px;
+    text-align: left;
 
     width: 481px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
 
     background-color: transparent;
   }
 
+  /*
   .site-list__item {
-    margin-right: 32px;
-
-    &:last-child {
-      margin-right: 0;
+    &:first-child {
+      margin-left: 4px;
     }
   }
+  */
 
   .site-list__item a {
-    padding: 9px 0;
-    background: none;
-    border: none;
-  }
-
-  .site-list__item--active a {
-    border-bottom: 2px solid @bg-lightgreen;
+    padding: 7px 0 7px 1px;
   }
 
   .page-header--index {
-    color: @bg-white;
-
-    .site-list a[href] {
+    .site-list__link[href] {
       &:hover {
         color: rgba(255, 255, 255, 0.6);
       }

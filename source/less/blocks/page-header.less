@@ -1,7 +1,4 @@
 .page-header {
-  width: 320px;
-  margin: 0 auto;
-
   padding-top: 11px;
 
   font-family: @font;
@@ -15,20 +12,15 @@
 }
 
 .page-header__wrapper {
-  //.wrapper();
+  width: 320px;
 
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  margin: 0 auto;
 }
 
-@media (max-width: @mobile-width-only) {
+@media @mobile-width-only {
   .page-header__logo {
-    //display: block;
     padding-left: 20px;
     padding-bottom: 14px;
-    //width: 192px;
-    //height: 38px;
 
     border-bottom: 1px solid #e6e6e6;
   }
@@ -36,13 +28,13 @@
 
 @media @tablet-width {
   .page-header {
-    width: 768px;
     margin: 0 auto;
 
     padding-top: 24px;
   }
 
   .page-header__wrapper {
+    width: 768px;
     .wrapper();
 
     display: flex;
@@ -50,61 +42,30 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  .page-header__logo {
+    margin-top: -4px;
   }
 }
 
 @media @desktop-width {
   .page-header {
-    //min-width: 1200px;
-    width: 1300px;
+    //width: 1300px;
 
-    //width: 1440px;
-    margin: 0 auto;
-
-    padding-top: 56px;
-  }
-
-  .page-header--index {
-    .site-list a {
-      color: @bg-white;
-    }
-
-    position: relative;
-  }
-
-  .page-header--index::before {
-    content: "";
-    position: absolute;
-    background: url("../img/index-background-desktop@1x.jpg");
-
-    top: 0;
-    //right: -63px;
-    left: 50%;
-
-    width: 720px;
-    height: 696px;
-
-    //background-position: right top;
-    background-position: left top;
-    background-color: @bg-lightgreen;
-
-    background-repeat: no-repeat;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @bg-lightgreen url("../img/index-background-desktop@2x.jpg");
-      background-size: 100% auto;
-      //background-size: 1440px 1392px;
-    }
-    //z-index: -1;
+    padding-top: 59px;
   }
 
   .page-header__wrapper {
-    .wrapper();
+    width: 1300px;
+  }
 
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+  .page-header--index {
+    margin: 0 auto;
+
+    .site-list__link {
+      color: @bg-white;
+    }
+    // position: relative;
   }
 }

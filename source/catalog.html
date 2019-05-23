@@ -5,7 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -51,7 +51,6 @@
                   <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy PRO 500 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -85,7 +84,6 @@
                   <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy PRO 1000 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -119,7 +117,6 @@
                   <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy PRO 500 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -153,7 +150,6 @@
                   <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy PRO 500 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -187,7 +183,6 @@
                   <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="Cat Energy Slim 500 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 500 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -221,7 +216,6 @@
                   <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Cat Energy Slim 1000 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 1000 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -255,7 +249,6 @@
                   <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
                   <img class="catalog__img" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Cat Energy Slim 500 г">
                 </picture>
-                <!-- <img class="catalog__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Slim 500 г"> -->
               </a>
               <div class="catalog__item-table">
                 <a class="catalog__item-product" href="#">
@@ -287,54 +280,74 @@
         </div>
       </section>
 
-      <section class="inner-content">
-        <h2 class="inner-content__big-heading">Дополнительные товары</h2>
-        <div class="inner-content__wrapper">
-          <ul class="inner-content__list">
+      <section class="offers">
+        <div class="offers__big-heading  big-heading">
+          <div class="big-heading__wrapper">
+            <h2 class="big-heading__title">Дополнительные товары</h2>
+          </div>
+        </div>
+        <div class="offers__wrapper">
+          <ul class="offers__inner-content  inner-content">
             <li class="inner-content__item">
-              <b>Сахарозаменитель</b>
+              <b class="inner-content__title-item">Сахарозаменитель</b>
               <table class="inner-content__table">
-                <tr>
-                  <td>1 упаковка (100 г)</td>
-                  <td>200 Р.</td>
-                </tr>
-              </table>
-              <a class="inner-content__button  button-selection-main" href="#">Заказать</a>
-            </li>
-            <li>
-              <b>Питьевая вода</b>
-              <table class="inner-content__table">
-                <tr>
-                  <td>5 литров</td>
-                  <td>50 Р.</td>
+                <tr class="inner-content__line">
+                  <td class="inner-content__field">1 упаковка (100 г)</td>
+                  <td class="inner-content__value">200 Р.</td>
                 </tr>
               </table>
               <a class="inner-content__button  button-selection-main" href="#">Заказать</a>
             </li>
             <li class="inner-content__item">
-              <b>Молоко</b>
+              <b class="inner-content__title-item">Питьевая вода</b>
               <table class="inner-content__table">
                 <tr>
-                  <td>1 литр</td>
-                  <td>100 Р.</td>
+                  <td class="inner-content__field">5 литров</td>
+                  <td class="inner-content__value">50 Р.</td>
                 </tr>
               </table>
               <a class="inner-content__button  button-selection-main" href="#">Заказать</a>
             </li>
             <li class="inner-content__item">
-              <b>Витамины</b>
+              <b class="inner-content__title-item">Молоко</b>
               <table class="inner-content__table">
                 <tr>
-                  <td>1 упаковка (30 г)</td>
-                  <td>300 Р.</td>
+                  <td class="inner-content__field">1 литр</td>
+                  <td class="inner-content__value">100 Р.</td>
                 </tr>
               </table>
               <a class="inner-content__button  button-selection-main" href="#">Заказать</a>
             </li>
             <li class="inner-content__item">
-              <b>Закажите все и&nbsp;получите чехол для кота в подарок!</b>
+              <b class="inner-content__title-item">Витамины</b>
+              <table class="inner-content__table">
+                <tr>
+                  <td class="inner-content__field">1 упаковка (30 г)</td>
+                  <td class="inner-content__value">300 Р.</td>
+                </tr>
+              </table>
+              <a class="inner-content__button  button-selection-main" href="#">Заказать</a>
             </li>
           </ul>
+
+          <section class="offers__additional-content  additional-content">
+            <b class="additional-content__title-item">Закажите все и&nbsp;получите чехол для кота в подарок!</b>
+          </section>
+        </div>
+      </section>
+
+      <section class="main-footer">
+        <div class="main-footer__contacts  contacts">
+          <div class="contacts__wrapper">
+            <b class="contacts__description">приглашаем к&nbsp;сотрудничеству дилеров!</b>
+            <p class="contacts__address  contacts__address--mobile">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург</p>
+            <p class="contacts__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <br><br>Санкт-Петербург</p>
+          </div>
+        </div>
+
+        <div class="main-footer__map  map  map--nojs">
+          <h3 class="visually-hidden">Отображение адреса на карте</h3>
+          <iframe class="map__maps" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3997.2069332479377!2d30.318670028710827!3d59.93872180186445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!3m2!1d59.9387165!2d30.3230474!4m5!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!3m2!1d59.9387165!2d30.3230474!5e0!3m2!1sru!2sua!4v1558516249988!5m2!1sru!2sua" width="100%" height="100%" align="absmiddle" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </section>
     </main>
@@ -450,5 +463,6 @@
     <script src="js/picturefill.js"></script>
     <script src="js/svgxuse.js" defer=""></script>
     <script src="js/navmain.js"></script>
+    <script src="js/mainmap.js"></script>
   </body>
 </html>

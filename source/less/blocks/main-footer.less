@@ -1,0 +1,28 @@
+.main-footer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media @desktop-width {
+    flex-direction: row;
+    align-items: center;
+
+    .main-footer__contacts{
+      display: inline-block;
+      vertical-align: top;
+
+      position: absolute;
+      top: 98px;
+      right: 50%;
+      margin-right: 40px;
+
+      z-index: 1;
+    }
+
+    .main-footer__map {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+}

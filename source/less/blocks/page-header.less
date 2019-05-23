@@ -1,5 +1,5 @@
 .page-header {
-  padding-top: 11px;
+  padding-top: 12px;
 
   font-family: @font;
   font-size: 20px;
@@ -51,9 +51,29 @@
 
 @media @desktop-width {
   .page-header {
-    //width: 1300px;
-
     padding-top: 59px;
+  }
+
+  .page-header--index::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background: url("../img/index-background-desktop@1x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 696px;
+
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media @retina {
+      background: url("../img/index-background-desktop@2x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+      background-size: cover;
+    }
   }
 
   .page-header__wrapper {
@@ -66,6 +86,5 @@
     .site-list__link {
       color: @bg-white;
     }
-    // position: relative;
   }
 }

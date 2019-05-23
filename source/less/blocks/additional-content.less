@@ -1,0 +1,98 @@
+.additional-content {
+  position: relative;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+  background-position: center 39px;
+
+  margin: 0 auto;
+  padding: 226px 56px 42px 56px;
+
+  background-size: 100% 289px;
+  background-repeat: no-repeat;
+
+  @media @retina {
+    background: url("../img/gift-photo-mobile@2x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+    background-repeat: no-repeat;
+
+    background-size: 100% 289px;
+    background-position: center 39px;
+    margin: 0 auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 104px;
+    left: 113px;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media @tablet-width-only {
+    background-image: url("../img/gift-photo-tablet@1x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+    background-position: center 69px;
+
+    margin: 0 auto;
+    padding: 141px 120px 68px 423px;
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/gift-photo-tablet@2x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+      background-repeat: no-repeat;
+      background-size: 100% 200px;
+
+      background-position: center 69px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      top: 134px;
+      left: 91px;
+    }
+  }
+
+  @media @desktop-width {
+    margin: 0;
+    background: url("../img/gift-photo-desktop@1x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+    background-repeat: no-repeat;
+    background-size: 245px 291px;
+
+    width: 245px;
+    background-position: right top;
+    padding: 188px 40px 39px 40px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/gift-photo-desktop@2x.jpg"), linear-gradient(@bg-lightgreen, @bg-lightgreen);
+      background-repeat: no-repeat;
+
+      background-size: 245px 291px;
+      background-position: right top;
+    }
+
+    &::before {
+      top: 65px;
+      left: 96px;
+    }
+  }
+}
+
+.additional-content__title-item {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: @foot-font;
+  text-align: center;
+  color: @bg-white;
+  text-transform: none;
+
+  padding: 0;
+  display: flex;
+
+  @media @tablet-width-only {
+    line-height: 20px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,180 @@
+.filter {
+  margin: 0;
+  padding: 39px 0 0 0;
+
+  @media @tablet-width {
+    padding: 66px 0 0 0;
+  }
+
+  @media @desktop-width {
+    padding: 55px 0 0 0;
+  }
+}
+
+.filter__wrapper {
+  margin: 0;
+  padding: 0;
+
+  @media @tablet-width {
+    width: 768px;
+
+    min-width: 768px;
+    margin: 0 auto;
+
+    padding-left: 72px;
+    padding-right: 65px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media @desktop-width {
+    width: 1300px;
+
+    .wrapper();
+    //min-width: 1300px;
+    //margin: 0 auto;
+
+    //padding-left: 40px;
+    //padding-right: 40px;
+
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.filter__appointment {
+  margin: 0;
+  padding: 0;
+}
+
+.filter__wrapper-program {
+  margin: 0 auto 22px auto;
+
+  @media @tablet-width {
+    width: 100%;
+
+    margin: 0 auto 56px auto;
+  }
+
+  @media @desktop-width {
+    width: 570px;
+
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+
+.filter__big-heading-contact {
+  margin-top: 42px;
+
+  .big-heading__title {
+
+    @media @mobile-width-only {
+      min-width: 100px;
+      max-width: 220px;
+      margin-top: 16px;
+    }
+
+    @media @tablet-width {
+      padding: 0 40px;
+      min-width: 220px;
+    }
+
+    @media @desktop-width {
+      padding: 0 37px;
+    }
+  }
+
+  @media @desktop-width {
+    margin-top: 72px;
+  }
+}
+
+.filter__contact {
+  margin-top: 25px;
+}
+
+.filter__big-heading-letter {
+  margin: 28px 0 10px 0;
+
+  .big-heading__title {
+    min-width: 115px;
+  }
+}
+
+@media @tablet-width {
+  .filter__big-heading-letter {
+    margin: 68px 0 10px 0;
+
+    .big-heading__title {
+      padding: 0 40px;
+      min-width: 115px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .filter__big-heading-letter {
+    margin: 69px 0 10px 0;
+
+    .big-heading__title {
+      padding: 0 37px;
+    }
+  }
+}
+
+.filter__big-heading-still {
+
+  .big-heading__title {
+    min-width: 140px;
+
+    @media @tablet-width {
+      padding: 0 40px;
+    }
+
+    @media @desktop-width {
+      padding: 0 37px;
+    }
+  }
+
+  //@media @tablet-width {
+  //    padding: 0 40px;
+  //  }
+
+  @media @desktop-width {
+    margin-top: 2px;
+  }
+}
+
+.filter__wrapper-still {
+  width: 320px;
+
+  .wrapper();
+
+  @media @tablet-width-only {
+    width: 768px;
+
+    padding-left: 72px;
+    padding-right: 65px;
+  }
+
+  @media @desktop-width {
+    width: 1300px;
+  }
+}
+
+.filter__still {
+  .list-reset();
+
+  margin: 11px 0 0 0;
+
+  //@media @tablet-width {
+  //  margin: 14px 0 0 0;
+  //}
+}
+
+.filter__completion {
+  margin: 0;
+  padding: 0;
+}

@@ -37,7 +37,111 @@
 
     <main class="form-main">
       <div class="form-main__wrapper">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <p class="form-main__description">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
       </div>
+
+      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+        <div class="filter__wrapper">
+          <div class="filter__appointment  appointment">
+            <div class="appointment__wrapper">
+              <p class="appointment__item">
+                <label class="appointment__name" for="name">Имя:*</label>
+                <input class="appointment__specific" id="name" type="text" name="name" placeholder="Барсик">
+              </p>
+              <p class="appointment__item">
+                <label class="appointment__name" for="weight">Вес (кг):*</label>
+                <input class="appointment__specific  appointment__specific--error" id="weight" type="number" name="weight" placeholder="7">
+              </p>
+              <p class="appointment__item">
+                <label class="appointment__name" for="age">Возраст (лет):</label>
+                <input class="appointment__specific" id="age" type="number" name="age" placeholder="7">
+              </p>
+            </div>
+          </div>
+          <div class="filter__wrapper-program">      <!-- filter__program-->
+            <ul class="program">
+              <li class="program__option">
+                <input class="program__input  radio-input  visually-hidden" type="radio" name="weight" value="Похудение" id="weight-loss" checked>
+                <label class="program__name" for="weight-loss">Похудение</label>
+              </li>
+              <li class="program__option">
+                <input class="program__input  radio-input  visually-hidden" type="radio" name="weight" value="Набор массы" id="weight-gain">
+                <label class="program__name" for="weight-gain">Набор массы</label>
+              </li>
+              <li class="program__option">
+                <input class="program__input  radio-input  visually-hidden" type="radio" name="weight" value="Не знаю" id="advice">
+                <label class="program__name" for="advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="filter__big-heading-contact  big-heading">       <!-- contact__big-heading-->
+          <div class="big-heading__wrapper">
+            <h2 class="big-heading__title">Контактные данные (владельца кота)</h2>
+          </div>
+        </div>
+        <div class="filter__contact  contact">
+          <div class="contact__wrapper">
+            <p class="contact__item">
+              <label class="contact__name" for="email">E-mail:*</label>
+              <input class="contact__specific  contact__specific--error" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            </p>
+            <p class="contact__item">
+              <label class="contact__name" for="phone">Телефон:*</label>
+              <input class="contact__specific" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            </p>
+          </div>
+        </div>
+
+        <div class="filter__big-heading-letter  big-heading">          <!-- letter__big-heading-->
+          <div class="big-heading__wrapper">
+            <h2 class="big-heading__title">Комментарий</h2>
+          </div>
+        </div>
+        <div class="filter__letter  letter">
+          <div class="letter__wrapper">
+            <p class="letter__item">
+              <label class="letter__name  visually-hidden" for="letter">Комментарий</label>
+              <textarea class="letter__specific" id="letter" name="letter" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </div>
+        </div>
+
+        <div class="filter__big-heading-still  big-heading">               <!-- still__big-heading-->
+          <div class="big-heading__wrapper">
+            <h2 class="big-heading__title">Дополнительно</h2>
+          </div>
+        </div>
+        <div class="filter__wrapper-still">                <!-- still__wrapper-->
+          <ul class="filter__still  still">
+            <li class="still__option">
+              <input class="still__input  chek-input  visually-hidden" type="checkbox" name="sweetener" value="Сахарозаменитель" id="sweetener" checked>
+              <label class="still__name" for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="still__option">
+              <input class="still__input  chek-input  visually-hidden" type="checkbox" name="water" value="Питьевая вода" id="water">
+              <label class="still__name" for="water">Питьевая вода</label>
+            </li>
+            <li class="still__option">
+              <input class="still__input  chek-input  visually-hidden" type="checkbox" name="milk" value="Молоко" id="milk">
+              <label class="still__name" for="milk">Молоко</label>
+            </li>
+            <li class="still__option">
+              <input class="still__input  chek-input  visually-hidden" type="checkbox" name="vitamins" value="Витамины" id="vitamins">
+              <label class="still__name" for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter__completion  completion">
+          <div class="completion__wrapper">
+            <button class="completion__button button-selection-main" type="submit">Отправить заявку</button>
+            <b class="completion__remarks">* — Обязательные поля</b>
+          </div>
+        </div>
+      </form>
 
       <section class="main-footer">
         <div class="main-footer__contacts  contacts">

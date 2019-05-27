@@ -1,0 +1,39 @@
+.button-slider {
+  padding: 5px 0 6px 0;
+
+  display: inline-block;
+  vertical-align: top;
+
+  color: @bg-alblack;
+  background-color: @bg-lightgrey;
+
+  font-family: @font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+
+  border: none;
+  outline-style: none;
+}
+
+@media @tablet-width {
+  .button-slider {
+    font-size: 20px;
+    line-height: 20px;
+
+    border-bottom:  1px dotted rgba(17, 17, 17, 0.23);
+
+    &:hover {
+      border-bottom:  1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active {
+      border: none;
+      padding: 5px 0 7px 0;
+    }
+  }
+}

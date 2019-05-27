@@ -1,0 +1,185 @@
+.cat-information__description {
+  margin: 0 0 24px 0;
+  padding: 0 14px 0 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: @bg-darkgrey;
+  font-family: @foot-font;
+  text-transform: none;
+}
+
+.cat-information__list {
+  .list-reset();
+  padding: 0;
+  margin: 0 0 32px 0;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cat-information__item {
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+}
+
+.cat-information__field {
+  margin: 0;
+  padding: 13px 0 0 0;
+  font-size: 24px;
+  line-height: 24px;
+  color: @bg-alblack;
+  font-family: @font;
+
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  width: 124px;
+  height: 56px;
+}
+
+.cat-information__value {
+  font-size: 12px;
+  line-height: 12px;
+  color: @bg-darkgrey;
+  font-family: @foot-font;
+
+  text-align: center;
+  text-transform: none;
+  background-color: @bg-lightgrey;
+  max-width: 87px;
+  margin: 0;
+  padding: 0 10px 0 10px;
+
+  position: absolute;
+  bottom: -15px;
+  left: 14.5%;
+}
+
+.cat-information__table {
+  margin: 0 0 32px 38px;
+  width: 220px;
+}
+
+.cat-information__costs {
+  width: 60%;
+  text-align: right;
+}
+
+.cat-information__sum {
+  width: 40%;
+  text-align: left;
+}
+
+@media @tablet-width {
+  .cat-information__description {
+    margin: 0 0 53px 0;
+    padding: 0 14px 0 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cat-information__information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cat-information__list {
+    width: 366px;
+  }
+
+  .cat-information__table {
+    margin: 9px 0 0 0;
+    width: 320px;
+  }
+
+  .cat-information__line {
+    font-size: 20px;
+    line-height: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .cat-information__costs {
+    width: 70%;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .cat-information__sum {
+    width: 30%;
+    text-align: right;
+    padding: 0;
+  }
+
+  .cat-information__field {
+    padding: 14px 0 0 0;
+    font-size: 30px;
+    line-height: 37px;
+
+    width: 162px;
+    height: 72px;
+  }
+
+  .cat-information__value {
+    font-size: 14px;
+    line-height: 14px;
+
+    max-width: 100%;
+    margin: 0;
+    padding: 0 7px 0 7px;
+
+    position: absolute;
+    bottom: -5px;
+    left: 15%;
+
+    @media @tablet-width-only {
+      background-color: @bg-white;
+    }
+  }
+
+  .cat-information__item:last-child .cat-information__value {
+    left: 6%;
+  }
+}
+
+@media @desktop-width {
+  .cat-information {
+    width: 450px;
+  }
+
+  .cat-information__description {
+    margin: 0 0 68px 0;
+  }
+
+  .cat-information__information {
+    flex-direction: column;
+  }
+
+  .cat-information__list {
+    margin: 0 0 59px;
+  }
+
+  .cat-information__line {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cat-information__table {
+    padding: 0;
+    margin: 0;
+    width: 330px;
+  }
+
+  .cat-information__costs {
+    margin: 0;
+    text-align: left;
+  }
+}

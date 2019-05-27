@@ -1,0 +1,75 @@
+.letter {
+  padding: 32px 0 39px 0;
+
+  @media @tablet-width {
+    padding: 77px 0 84px 0;
+  }
+}
+
+
+
+.letter__wrapper {
+  width: 320px;
+
+  .wrapper();
+
+  @media @tablet-width-only {
+    width: 768px;
+
+    padding-left: 72px;
+    padding-right: 65px;
+  }
+
+  @media @desktop-width {
+    width: 1300px;
+  }
+}
+
+.letter__item {
+  padding: 0;
+  margin: 0;
+}
+
+.letter__specific {
+  font-size: 16px;
+  line-height: 18px;
+  color: @bg-darkgrey;
+  font-family: @font;
+  font-weight: 400;
+  outline-style: none;
+
+  background-color: transparent;
+  border: 1px solid @bg-verylightgrey;
+  text-transform: uppercase;
+
+  width: 100%;
+  padding: 12px 10px 13px 15px;
+  height: 150px;
+
+  &:active,
+  &:focus {
+    outline-style: none;
+    border: 2px solid @bg-darkgrey;
+
+    padding: 11px 9px 12px 14px;
+  }
+
+  &--error {
+    outline-style: none;
+    border: 2px solid @bg-error;
+
+    padding: 11px 9px 12px 14px;
+  }
+
+  @media @tablet-width {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 9px 10px 13px 17px;
+    height: 174px;
+  }
+
+  @media @desktop-width {
+    padding: 9px 10px 13px 19px;
+  }
+}

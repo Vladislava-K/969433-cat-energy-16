@@ -6,8 +6,6 @@
   }
 }
 
-
-
 .contact__wrapper {
   width: 230px;
 
@@ -64,6 +62,8 @@
 
   margin: 0 10px 0 0;
 
+  position: relative;
+
   @media @tablet-width {
     margin: 0 16px 0 0;
   }
@@ -100,51 +100,97 @@
   }
 }
 
+.contact__icon {
+  position: absolute;
+
+  font-size: 0;
+  color: @bg-black;
+
+  &--email {
+    top: 710px;
+    right: 50%;
+    margin-right: -125px;
+
+    width: 17px;
+    height: 13px;
+
+    @media @tablet-width {
+      top: 1045px;
+      right: 50%;
+      margin-right: -300px;
+    }
+
+    @media @desktop-width {
+      top: 825px;
+      right: 50%;
+      margin-right: 62px;
+    }
+  }
+
+  &--phone {
+    top: 767px;
+    right: 50%;
+    margin-right: -129px;
+
+    @media @tablet-width {
+      top: 1114px;
+      right: 50%;
+      margin-right: -301px;
+    }
+
+    @media @desktop-width {
+      top: 822px;
+      right: 50%;
+      margin-right: -590px;
+    }
+  }
+}
+
+.contact__specific:focus + .contact__icon,
+.contact__specific:active + .contact__icon {
+  fill: @bg-lightgreen;
+}
+
+.contact__specific--error + .contact__icon {
+  fill: @bg-error;
+}
+
 .contact__item:first-of-type {
   .contact__specific {
-    background-image: url("../img/icon-mail.svg");
-    background-position: 185px center;
-    background-repeat: no-repeat;
-
-    &:active,
-    &:focus {
-      background-image: url("../img/icon-mail-activ.svg");
-    }
-
-    &--error {
-      background-image: url("../img/icon-mail-error.svg");
-    }
 
     @media @tablet-width {
       padding: 12px 40px 13px 23px;
-      background-position: 514px center;
+
+      &:active,
+      &:focus,
+      &--error {
+        padding: 11px 39px 12px 22px;
+      }
     }
 
     @media @desktop-width {
       padding: 12px 40px 13px 16px;
-      background-position: 447px center;
+
+      &:active,
+      &:focus,
+      &--error {
+        padding: 11px 39px 12px 15px;
+      }
     }
   }
 }
 
 .contact__item:last-of-type {
   .contact__specific {
-    background-image: url("../img/icon-phone.svg");
-    background-position: 169px center;
-    background-repeat: no-repeat;
-
-    &:active,
-    &:focus {
-      background-image: url("../img/icon-phone-activ.svg");
-    }
-
-    &--error {
-      background-image: url("../img/icon-phone-error.svg");
-    }
 
     @media @tablet-width {
-      padding: 13px 40px 13px 19px;
-      background-position: 497px center;
+      padding: 13px 40px 14px 19px;
+
+      &:active,
+      &:focus,
+      &--error {
+        padding: 12px 39px 13px 18px;
+      }
     }
 
     @media @desktop-width {
@@ -153,7 +199,6 @@
   }
 
   .contact__name {
-
     @media @tablet-width {
       margin: 0 15px 0 -2px;
     }

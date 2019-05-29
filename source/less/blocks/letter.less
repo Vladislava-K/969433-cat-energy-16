@@ -6,8 +6,6 @@
   }
 }
 
-
-
 .letter__wrapper {
   width: 320px;
 
@@ -28,6 +26,13 @@
 .letter__item {
   padding: 0;
   margin: 0;
+}
+
+.letter__name {
+  span {
+    display: block;
+    font-size: 0;
+  }
 }
 
 .letter__specific {
@@ -67,9 +72,21 @@
 
     padding: 9px 10px 13px 17px;
     height: 174px;
+
+    &:active,
+    &:focus,
+    &--error {
+      padding: 8px 9px 12px 16px;
+    }
   }
 
   @media @desktop-width {
     padding: 9px 10px 13px 19px;
+
+    &:active,
+    &:focus,
+    &--error {
+      padding: 8px 9px 12px 18px;
+    }
   }
 }

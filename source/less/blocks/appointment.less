@@ -20,6 +20,12 @@
 
     .wrapper();
   }
+
+  .appointment__item:last-of-type {
+    .appointment__specific {
+      max-width: 178px;
+    }
+  }
 }
 
 .appointment__item {
@@ -28,7 +34,6 @@
   width: 100%;
 
   font-size: 16px;
-  line-height: 18px;
   font-family: @font;
 
   font-weight: 400;
@@ -38,10 +43,6 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: nowrap;
-
-  //@media @mobile-width-only {
-  //  max-width: 280px;
-  //}
 
   @media @tablet-width {
     font-size: 20px;
@@ -95,26 +96,21 @@
 
   @media @tablet-width {
     padding: 13px 18px 13px 15px;
+
+    &:active,
+    &:focus,
+    &--error {
+      padding: 12px 17px 12px 14px;
+    }
   }
 
   @media @desktop-width {
     padding: 13px 18px 13px 18px;
-  }
-}
 
-@media @mobile-width-only {
-  //.appointment__item:first-of-type {
-  //  .appointment__name {
-  //    max-width: 36px;
-  //    margin: 0 18px 0 0;
-  //  }
-  //  .appointment__specific {
-  //    max-width: 234px;
-  //  }
-  //}
-  .appointment__item:last-of-type {
-    .appointment__specific {
-      max-width: 178px;
+    &:active,
+    &:focus,
+    &--error {
+      padding: 12px 17px 12px 17px;
     }
   }
 }

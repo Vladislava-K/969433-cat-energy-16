@@ -5,7 +5,7 @@
   vertical-align: top;
 
   color: @bg-alblack;
-  background-color: @bg-lightgrey;
+  background-color: transparent;
 
   font-family: @font;
   font-weight: 400;
@@ -14,7 +14,6 @@
 
   text-transform: uppercase;
   text-align: center;
-
 
   border: none;
   outline-style: none;
@@ -25,10 +24,18 @@
     font-size: 20px;
     line-height: 20px;
 
-    border-bottom:  1px dotted rgba(17, 17, 17, 0.23);
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
 
     &:hover {
-      border-bottom:  1px solid rgba(17, 17, 17, 0.4);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+
+      cursor: pointer;
+    }
+
+    &:focus {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+
+      outline: thin dotted;
     }
 
     &:active {

@@ -16,12 +16,20 @@
   text-transform: uppercase;
   text-align: center;
 
-
   border: none;
   outline-style: none;
 
   &:hover {
     background-color: #5eaa2f;
+
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: #5eaa2f;
+    border-color: @bg-bly;
+
+    outline: thin dotted;
   }
 
   &:active {
@@ -34,9 +42,17 @@
   color: @bg-alblack;
   background-color: @bg-lightgrey;
 
-
   &:hover {
     background-color: #ebebeb;
+
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: #ebebeb;
+    border-color: @bg-bly;
+
+    outline: thin dotted;
   }
 
   &:active {

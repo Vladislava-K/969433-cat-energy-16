@@ -32,11 +32,6 @@
     width: 1300px;
 
     .wrapper();
-    //min-width: 1300px;
-    //margin: 0 auto;
-
-    //padding-left: 40px;
-    //padding-right: 40px;
 
     flex-direction: row;
     justify-content: center;
@@ -85,8 +80,12 @@
     }
   }
 
+  @media @tablet-width {
+    margin-top: 44px;
+  }
+
   @media @desktop-width {
-    margin-top: 72px;
+    margin-top: 74px;
   }
 }
 
@@ -115,7 +114,7 @@
 
 @media @desktop-width {
   .filter__big-heading-letter {
-    margin: 69px 0 10px 0;
+    margin: 68px 0 10px 0;
 
     .big-heading__title {
       padding: 0 37px;
@@ -136,12 +135,8 @@
     }
   }
 
-  //@media @tablet-width {
-  //    padding: 0 40px;
-  //  }
-
   @media @desktop-width {
-    margin-top: 2px;
+    margin-top: 1px;
   }
 }
 
@@ -166,10 +161,6 @@
   .list-reset();
 
   margin: 11px 0 0 0;
-
-  //@media @tablet-width {
-  //  margin: 14px 0 0 0;
-  //}
 }
 
 .filter__completion {

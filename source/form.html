@@ -56,7 +56,7 @@
               </p>
               <p class="appointment__item">
                 <label class="appointment__name" for="weight">Вес (кг):*</label>
-                <input class="appointment__specific  appointment__specific--error" id="weight" type="text" name="weight" placeholder="7" pattern="^[ 0-9]+$">
+                <input class="appointment__specific" id="weight" type="text" name="weight" placeholder="7" pattern="^[ 0-9]+$">
               </p>
               <p class="appointment__item">
                 <label class="appointment__name" for="age">Возраст (лет):</label>
@@ -88,22 +88,24 @@
           </div>
         </div>
         <div class="filter__contact  contact">
-          <div class="contact__wrapper">
-            <p class="contact__item">
-              <label class="contact__name" for="email">E-mail:*</label>
-              <input class="contact__specific  contact__specific--error" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          <p class="contact__item">
+            <label class="contact__name" for="email">
+              <span>E-mail:*</span>
+              <input class="contact__specific" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
               <svg class="contact__icon  contact__icon--email" width="17" height="13">
                 <use xlink:href="#icon-mail"></use>
               </svg>
-            </p>
-            <p class="contact__item">
-              <label class="contact__name" for="phone">Телефон:*</label>
+            </label>
+          </p>
+          <p class="contact__item">
+            <label class="contact__name" for="phone">
+              <span>Телефон:*</span>
               <input class="contact__specific" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
               <svg class="contact__icon  contact__icon--phone" width="20" height="20">
                 <use xlink:href="#icon-phone"></use>
               </svg>
-            </p>
-          </div>
+            </label>
+          </p>
         </div>
 
         <div class="filter__big-heading-letter  big-heading">
@@ -158,8 +160,9 @@
         <div class="main-footer__contacts  contacts">
           <div class="contacts__wrapper">
             <b class="contacts__description">приглашаем к&nbsp;сотрудничеству дилеров!</b>
-            <p class="contacts__address  contacts__address--mobile">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург</p>
-            <p class="contacts__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <br><br>Санкт-Петербург</p>
+            <p class="contacts__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+              <span>Санкт-Петербург</span>
+            </p>
           </div>
         </div>
 
